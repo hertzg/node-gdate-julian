@@ -1,0 +1,54 @@
+{
+  "name": "gdate-julian",
+  "version": "0.0.1",
+  "description": "Converts date to and from julian days in gLib GDate style",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hertzg/node-gdate-julian.git"
+  },
+  "keywords": [
+    "gnome",
+    "datetime",
+    "julian",
+    "julian-day",
+    "julian-day-count",
+    "glib",
+    "glib-gdate",
+    "glib-date",
+    "gdate",
+    "g_date",
+    "leap-year",
+    "leap",
+    "year",
+    "is_leap_year",
+    "g_date_get_julian ",
+    "g_date_is_leap_year",
+    "g_date_to_julian_days",
+    "g_julian_days_to_date",
+    "port",
+    "c-port",
+    "js",
+    "day",
+    "count",
+    "date",
+    "date-convert",
+    "homebank",
+    "hbf",
+    "xhb",
+    "xml",
+    "gregorian"
+  ],
+  "author": "George Kotchlamazashvili <georgedot@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hertzg/node-gdate-julian/issues"
+  },
+  "homepage": "https://github.com/hertzg/node-gdate-julian",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
