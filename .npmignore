@@ -6,3 +6,5 @@ node_modules
 .npm
 .idea
 __tests__
+.travis.yml
+jest.config.js
