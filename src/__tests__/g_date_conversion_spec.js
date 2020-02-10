@@ -24,24 +24,20 @@ const CASES = [
 
 describe('Date to and from Julian Days Conversions', () => {
 
-  it('should be able to count days elapsed since 0001-01-01T12:00:00.000Z', () => {
-    CASES.forEach(([date, julianDays]) => {
-      expect(g_date_to_julian_days(date))
+  it.each(CASES)('should convert date %j to %j julian days', (date, julianDays) => {
+    expect(g_date_to_julian_days(date))
         .toBe(julianDays)
 
-      expect(g_julian_days_to_date(julianDays).toISOString())
+    expect(g_julian_days_to_date(julianDays).toISOString())
         .toBe(date.toISOString())
-    })
   })
 
-  it('should convert to and from and stay consistent', () => {
-    CASES.forEach(([date, julianDays]) => {
-      expect(g_julian_days_to_date(g_date_to_julian_days(date)).toISOString())
+  it.each(CASES)('should convert to and from and stay the same for date %j and %j julian days', (date, julianDays) => {
+    expect(g_julian_days_to_date(g_date_to_julian_days(date)).toISOString())
         .toBe(date.toISOString())
 
-      expect(g_date_to_julian_days(g_julian_days_to_date(julianDays)))
+    expect(g_date_to_julian_days(g_julian_days_to_date(julianDays)))
         .toBe(julianDays)
-    })
   })
 
 })

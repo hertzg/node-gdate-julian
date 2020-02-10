@@ -16,16 +16,13 @@ const NON_LEAP_YEARS = [
 
 describe('Gregorian Leap year detection', () => {
 
-  it('should detect leap and non leap years', () => {
-    LEAP_YEARS.forEach((leapYear) => {
-      expect(g_date_is_leap_year(leapYear))
+  it.each(LEAP_YEARS)('should detect that gregorian %j year is a leap years', (year) => {
+    expect(g_date_is_leap_year(year))
         .toBe(true)
-    })
-
-    NON_LEAP_YEARS.forEach((nonLeapYear) => {
-      expect(g_date_is_leap_year(nonLeapYear))
-        .toBe(false)
-    })
   })
 
+  it.each(NON_LEAP_YEARS)('should detect that gregorian %j year is NOT a leap years', (year) => {
+    expect(g_date_is_leap_year(year))
+        .toBe(false)
+  })
 })
