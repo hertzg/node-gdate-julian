@@ -4,7 +4,6 @@ os:
   - linux
 
 node_js:
-  - lts/argon
   - lts/boron
   - lts/carbon
   - lts/dubnium
