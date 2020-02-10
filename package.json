@@ -53,6 +53,6 @@
   },
   "homepage": "https://github.com/hertzg/node-gdate-julian",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^25.1.0"
   }
 }
