@@ -43,9 +43,6 @@
     "xml",
     "gregorian"
   ],
-  "engines": {
-    "node": ">= 6"
-  },
   "author": "George Kotchlamazashvili <georgedot@gmail.com>",
   "license": "MIT",
   "bugs": {
