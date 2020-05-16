@@ -44,7 +44,7 @@
     "gregorian"
   ],
   "author": "George Kotchlamazashvili <georgedot@gmail.com>",
-  "license": "MIT",
+  "license": "LGPL-2.1-only",
   "bugs": {
     "url": "https://github.com/hertzg/node-gdate-julian/issues"
   },
