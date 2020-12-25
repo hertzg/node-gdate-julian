@@ -15,9 +15,9 @@ jobs:
           - ubuntu-latest
           - macos-latest
         node: # https://nodejs.org/en/about/releases/
-          - "14" # Active LTS
-          - "12" # Active LTS
-          - "10" # Maintenance LTS
+          - "14.x" # Active LTS
+          - "12.x" # Active LTS
+          - "10.x" # Maintenance LTS
       fail-fast: false
     steps:
       - run: git config --global core.autocrlf false
@@ -25,6 +25,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           check-latest: true
-          node-version: "14.x"
+          node-version: ${{ matrix.node }}
       - uses: bahmutov/npm-install@v1
-      - run: npm run test -- --detectOpenHandles
+      - run: npm run test

@@ -11,21 +11,18 @@ jobs:
     strategy:
       matrix:
         os:
-          - windows-latest
           - ubuntu-latest
-          - macos-latest
         node: # https://nodejs.org/en/about/releases/
-          - "14" # Active LTS
-          - "12" # Active LTS
-          - "10" # Maintenance LTS
-      fail-fast: false
+          - "14.x" # Active LTS
+          - "12.x" # Active LTS
+          - "10.x" # Maintenance LTS
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           check-latest: true
-          node-version: "14.x"
+          node-version: ${{ matrix.node }}
       - uses: bahmutov/npm-install@v1
       - run: npm run test
 
