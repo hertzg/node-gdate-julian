@@ -1,6 +1,6 @@
 {
   "name": "gdate-julian",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Converts date to and from julian days in gLib GDate style",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
