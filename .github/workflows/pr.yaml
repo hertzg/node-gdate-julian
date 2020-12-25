@@ -27,4 +27,4 @@ jobs:
           check-latest: true
           node-version: "14.x"
       - uses: bahmutov/npm-install@v1
-      - run: npm run test
+      - run: npm run test -- --detectOpenHandles
