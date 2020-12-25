@@ -35,13 +35,12 @@ jobs:
       - test
     if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'hertzg/node-gdate-julian' }}
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           check-latest: true
-          node-version: "14.x"
       - uses: bahmutov/npm-install@v1
-      - name: Release
+      - run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm run release
