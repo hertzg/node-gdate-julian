@@ -18,8 +18,8 @@ jobs:
           - "14.x" # Maintenance LTS
     steps:
       - run: git config --global core.autocrlf false
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           check-latest: true
           node-version: ${{ matrix.node }}
@@ -32,8 +32,8 @@ jobs:
       - test
     if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'hertzg/node-gdate-julian' }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           check-latest: true
       - uses: bahmutov/npm-install@v1
