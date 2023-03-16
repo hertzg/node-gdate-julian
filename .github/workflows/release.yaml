@@ -13,9 +13,9 @@ jobs:
         os:
           - ubuntu-latest
         node: # https://nodejs.org/en/about/releases/
-          - "14.x" # Active LTS
-          - "12.x" # Active LTS
-          - "10.x" # Maintenance LTS
+          - "18.x" # Active LTS
+          - "16.x" # Active LTS
+          - "14.x" # Maintenance LTS
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v2
