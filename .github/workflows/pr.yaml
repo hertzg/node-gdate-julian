@@ -15,10 +15,9 @@ jobs:
           - ubuntu-latest
           - macos-latest
         node: # https://nodejs.org/en/about/releases/
-          - "19.x" # Active LTS
-          - "18.x" # Active LTS
-          - "16.x" # Maintenance LTS
-          - "14.x" # Maintenance LTS
+          - "20.x"
+          - "19.x"
+          - "18.x"
       fail-fast: false
     steps:
       - run: git config --global core.autocrlf false

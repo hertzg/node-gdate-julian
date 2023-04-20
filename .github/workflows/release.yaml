@@ -1,4 +1,4 @@
-name: Release
+horename: Release
 
 on:
   push:
@@ -13,9 +13,9 @@ jobs:
         os:
           - ubuntu-latest
         node: # https://nodejs.org/en/about/releases/
-          - "18.x" # Active LTS
-          - "16.x" # Active LTS
-          - "14.x" # Maintenance LTS
+          - "20.x"
+          - "19.x"
+          - "18.x"
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v3

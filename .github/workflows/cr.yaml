@@ -6,17 +6,24 @@ permissions:
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+  pull_request_review_comment:
+    types: [created]
+
+concurrency:
+  group:
+    ${{ github.repository }}-${{ github.event.number || github.head_ref ||
+    github.sha }}-${{ github.workflow }}-${{ github.event_name ==
+    'pull_request_review_comment' && 'pr_comment' || 'pr' }}
+  cancel-in-progress: ${{ github.event_name != 'pull_request_review_comment' }}
 
 jobs:
-  test:
+  review:
     runs-on: ubuntu-latest
     steps:
-      - uses: anc95/ChatGPT-CodeReview@v1.0.4
+      - uses: fluxninja/openai-pr-reviewer@0.40.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          LANGUAGE: English
-          MODEL: gpt-3.5-turbo
-          top_p: 1
-          temperature: 1
+        with:
+          debug: false
+          review_comment_lgtm: false
