@@ -1,4 +1,4 @@
-const g_date_is_leap_year = require('../g_date_is_leap_year')
+import { g_date_is_leap_year } from '../g_date_is_leap_year.js'
 
 const LEAP_YEARS = [
   1584, 1588, 1592, 1596, 1600, 1604,

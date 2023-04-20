@@ -1,7 +1,8 @@
-const mkJDate = require('./_make_julian_date')
+import { make_julian_date as mkJDate } from './_make_julian_date.js';
+
 const t = Math.trunc
 
-const g_julian_days_to_date = (julian_days) => {
+export const g_julian_days_to_date = (julian_days) => {
   /* Formula taken from the Calendar FAQ; the formula was for the
    *  Julian Period which starts on 1 January 4713 BC, so we add
    *  1,721,425 to the number of days before doing the formula.
@@ -23,5 +24,3 @@ const g_julian_days_to_date = (julian_days) => {
 
   return mkJDate(y, m - 1, day)
 }
-
-module.exports = g_julian_days_to_date

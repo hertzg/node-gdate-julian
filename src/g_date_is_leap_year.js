@@ -1,4 +1,4 @@
-const g_date_is_leap_year = (year) =>
+export const g_date_is_leap_year = (year) =>
   (
     (
       (
@@ -9,5 +9,3 @@ const g_date_is_leap_year = (year) =>
       )
     ) || (year % 400) === 0
   )
-
-module.exports = g_date_is_leap_year

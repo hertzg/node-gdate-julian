@@ -1,4 +1,4 @@
-const g_date_is_leap_year = require('./g_date_is_leap_year')
+import { g_date_is_leap_year } from './g_date_is_leap_year.js'
 
 const days_in_year =
   [  /* 0, jan feb mar apr may  jun  jul  aug  sep  oct  nov  dec */
@@ -6,7 +6,7 @@ const days_in_year =
     [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366]
   ]
 
-const g_date_to_julian_days = (date) => {
+export const g_date_to_julian_days = (date) => {
   /* What we actually do is: multiply years * 365 days in the year,
    * add the number of years divided by 4, subtract the number of
    * years divided by 100 and add the number of years divided by 400,
@@ -30,5 +30,3 @@ const g_date_to_julian_days = (date) => {
 
   return julian_days
 }
-
-module.exports = g_date_to_julian_days

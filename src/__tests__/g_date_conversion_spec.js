@@ -1,5 +1,6 @@
-const g_date_to_julian_days = require('../g_date_to_julian_days')
-  , g_julian_days_to_date = require('../g_julian_days_to_date')
+import { g_date_to_julian_days } from '../g_date_to_julian_days.js'
+import { g_julian_days_to_date } from '../g_julian_days_to_date.js'
+
 
 const mkDate = (y, mm, d) => {
   let dt = new Date(0)
