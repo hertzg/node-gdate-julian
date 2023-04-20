@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), enforced with [semantic-release](https://github.com/semantic-release/semantic-release).
 
+## [2.0.1](https://github.com/hertzg/node-gdate-julian/compare/v2.0.0...v2.0.1) (2023-04-20)
+
+### Bug Fixes
+
+- update readme ([d340e80](https://github.com/hertzg/node-gdate-julian/commit/d340e808cb2948634b1adbe00e94a6a650b680dd))
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), enforced with [semantic-release](https://github.com/semantic-release/semantic-release).
+
 ## [2.0.0](https://github.com/hertzg/node-gdate-julian/compare/v1.0.8...v2.0.0) (2023-04-20)
 
 ### ⚠ BREAKING CHANGES
