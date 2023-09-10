@@ -18,7 +18,7 @@ jobs:
           - "18.x"
     steps:
       - run: git config --global core.autocrlf false
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           check-latest: true
@@ -32,7 +32,7 @@ jobs:
       - test
     if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'hertzg/node-gdate-julian' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           check-latest: true
